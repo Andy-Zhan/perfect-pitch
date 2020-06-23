@@ -348,7 +348,7 @@ const Player = () => {
                   variant="contained"
                   color="secondary"
                   onClick={check}
-                  disabled={mode === Mode.Survival && lives() === 0}
+                  disabled={(mode === Mode.Survival && lives() === 0) || pitchSelect.every((p: Boolean) => p === false)}
                   className={classes.actionButton}
                 >
                   Confirm
